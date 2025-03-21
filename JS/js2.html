@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript for Changing Background Color</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: initial, sans-serif;
+            transition: background-color 0.5s ease;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border: none;
+            background-color: #d12c2c;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A CHANGE OF COLORS</h1>
+    <h2>Welcome to color Playground!!</h2>
+    <h2>Click the button to bring your screen to life! </h2>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            const colors = ["#ff5733", "#33ff57", "#3357ff", "#f39c12", "#8e44ad", "#e74c3c"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+</body>
+</html>

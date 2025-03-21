@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover to Change Content</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: blueviolet;
+        }
+        #content {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover Over the Box !</h1>
+    
+    <div id="content">
+        <h2 id="text">Hover Over Me</h2>
+            
+            <img id="image" src="https://aigeeked.com/wp-content/uploads/2022/12/ai-text-generator.jpg" alt="Original Image">
+    </div>
+
+    <script>
+        const content = document.getElementById("content");
+        const text = document.getElementById("text");
+        const image = document.getElementById("image");
+
+        content.addEventListener("mouseover", function() {
+            text.textContent = "Click here for a New Image and text!";
+            image.src = "https://cubanvr.com/wp-content/uploads/2023/07/ai-image-generators.webp"; //  to the second image
+        });
+
+        content.addEventListener("mouseout", function() {
+            text.textContent = "Hover Over Me to go back";
+            image.src = "https://aigeeked.com/wp-content/uploads/2022/12/ai-text-generator.jpg"; //  back to the original image
+        });
+    </script>
+</body>
+</html>
