@@ -1,10 +1,10 @@
 body {
     font-style: oblique;
     background-color: #bb9fce;
-    margin: 0 px;
+    margin: 0;
     text-align: center;
     
-    align-items: center;
+    
     
 
 }
@@ -38,7 +38,7 @@ button {
     border: 5px;
     cursor: pointer;
     color: red;
-    font-style: calc();
+    font-style: oblique;
 } 
 
 
